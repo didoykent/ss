@@ -835,11 +835,13 @@ public function create_tutor_class(){
 
         if($class_schedule){
 
-          $equal = false;
 
+          $count = 0;
         foreach (  $class_schedule as $key2 => $schedule) {
 
 
+
+              $equal = false;
           if($schedule->schedule->classid !== $value['s_id']){
 
 
@@ -854,10 +856,11 @@ public function create_tutor_class(){
           }
 
 
-          if($equal === true &&  $key2 === count($class_schedule)-1){
+          if($equal === true &&  $count === count($class_schedule)-1){
 
 
                 $this->tutor->add_class_by_tutor_id($value['tutor_id'], $data);
+                  $count++;
                 break;
           }
 

@@ -38,10 +38,6 @@ get_tutor_classes()
 
 },300000)
 
-setInterval(() => {
-
-update_tutor_classes()
-},360000)
 
 
 function migrate_tutor_data(){
